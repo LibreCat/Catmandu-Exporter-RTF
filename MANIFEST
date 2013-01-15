@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Catmandu-Exporter-RTF.t
+lib/Catmandu/Exporter/RTF.pm
+lib/Catmandu/Exporter/Cite.pm

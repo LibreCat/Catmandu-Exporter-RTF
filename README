@@ -1,0 +1,36 @@
+Catmandu::Exporter::RTF version 0.01
+==================================
+
+Catmandu::Exporter::RTF takes a list of html formatted strings (i.e. citations/bibliographies) and returns an RTF formatted string containing an unordered list.
+
+This module requires the Catmandu framework.
+
+Due to restrictions within the RTF format and double encodings occurring on our local system, it was necessary to convert the single input strings to hexadecimal format before embedding them in the RTF code. If the output of this module is not handed over to Dancer's send_file, the conversion might not be necessary.
+
+From this hex conversion another problem arises: the RTF format only supports hexadecimal values with two digits (the \' escape sequence interprets the following two characters as hex, but no more than two). For some hex values with three or four characters, I provided a substitution. But for some there was no fitting RTF command. Cyrillic characters, for example, are not converted properly, either.
+
+I am still looking for a solution to this.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  Catmandu
+  Catmandu::Exporter::Cite (as provided with this bundle)
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2013 by P. Kohorst
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.14.2 or,
+at your option, any later version of Perl 5 you may have available.

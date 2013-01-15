@@ -1,0 +1,6 @@
+Revision history for Perl extension Catmandu::Exporter::RTF.
+
+0.01  Wed Jan  9 09:58:04 2013
+	- original version; created by h2xs 1.23 with options
+		-AXc -n Catmandu::Exporter::RTF
+
